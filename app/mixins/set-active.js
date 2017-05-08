@@ -1,8 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Mixin.create({
-    linkId: null,
-    setActive: Ember.computed('linkId', function(){
-        Ember.$(this.get('linkId')).addClass('active');
-    }),
+    init(){
+        let _this = this;
+        Ember.$(document).ready(function(){
+            Ember.$(_this.get('linkId')).addClass('active');
+        });
+    },
 });
