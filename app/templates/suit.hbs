@@ -1,1 +1,7 @@
-{{outlet}}
+<div class="container">
+    <div class="row">
+        {{#each model as |product|}}
+            {{products-grid product=product}}
+        {{/each}}
+    </div>
+</div>

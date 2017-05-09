@@ -1,0 +1,12 @@
+<div class="box1 text-center" id={{product.id}}>
+<div class="prodinfobox1">
+<p>{{product.shortName}}</p>
+<p>Цена: {{product.price}}<span class="rur">p<span>уб.</span></span></p>
+{{#if product.sale}}
+ <p> <span class='sale-ammount'>-{{product.discount}}%</span>
+ {{product.discountedPrice}}<span class="rur">p<span>уб.</span></span></p>
+ {{/if}}
+</div>
+<a href='http://femdress.ru/item/?id={{product.id}}&type=dress'><img 
+src='http://femdress.ru/images/products/thumbs/{{thumb}}'/>
+</a></div>

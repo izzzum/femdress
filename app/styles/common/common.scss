@@ -57,15 +57,6 @@ body{
         height: 100vh;
     }
 }
-//paragraphs
-p {
-    padding: 10px;
-    padding-bottom: 0;
-    }
-//remove after applying proper bootstrap styles
-.container {
-    padding: 0;
-}
 //navigation menu
 nav{
     top: 0;
@@ -140,7 +131,149 @@ body .liquid-fix{
 .no-scroll {
     overflow: hidden;
 }
+.line-after {
+    &:after{
+        display: block;
+        content: "";
+        width: 100%;
+        height: 10px;
+        background: #C6CED7;
+        margin: auto;
+ }
+}
+.line-before {
+    &:before{
+        display: block;
+        content: "";
+        width: 100%;
+        height: 10px;
+        background: #C6CED7;
+        margin: auto;
+ }
+}
 //bootstrap addons
 .col-grow-3{
     width: 33.3333%;
+}
+@media (max-width: 767px) {
+  // Align text to center.
+  .text-xs-center {
+    text-align: center;
+  }
+  // Margin center
+  .margin-xs-center {
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
+
+
+//paste
+
+  /*RUBLE SIGN HANDLER*/
+   @font-face { font-family: "Rubl Sign"; src: url('http://www.artlebedev.ru/;-)/ruble.eot'); }
+    span.rur { position: relative; font-family: "Rubl Sign"; text-transform: uppercase; font-size: 18px;}    
+    span.rur span { position: absolute; overflow: hidden; width: .45em; height: 1em; margin: .1ex 0 0 -.55em; }
+    span.rur span:before { content: '\2013'; }
+
+
+/*===================================================================================*/
+/*  Sections                                                                         */ 
+/*===================================================================================*/
+
+.prodinfobox1{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+.box1:hover .prodinfobox1{
+z-index: 10;
+p{
+    opacity: 1;
+    background: #fff;
+}
+}
+
+.box1{
+overflow: hidden;
+background: #f2f2f2;
+p{
+    transition: all .2s ease;
+    opacity: 0;
+    width: 84%;
+}
+}
+.box1 a{
+text-decoration: none;
+}
+.box1 a img{
+    transition: all .2s ease;
+    transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -o-transform: scale(0.9);
+image-rendering: -moz-crisp-edges;          /* Firefox             */
+image-rendering: -o-crisp-edges;            /* Opera               */
+image-rendering: -webkit-optimize-contrast; /* Chrome (and Safari) */
+image-rendering: optimize-contrast;         /* CSS3 Proposed       */
+-ms-interpolation-mode: nearest-neighbor;   /* IE8+                */
+}
+.box1:hover a img{
+    opacity: 0.5;
+    transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+.box1:hover{
+  border-bottom-color: #900;
+}
+
+
+/*===================================================================================*/
+/*  Cloud Zoom                                                                        */ 
+/*===================================================================================*/
+/* This is the moving lens square underneath the mouse pointer. */
+.cloud-zoom-lens {
+  /*border: 0px solid #888;
+  margin: 0px;  /* Set this to minus the border thickness. */
+  /*border-radius: 30px;*/
+  border-top-right-radius: 30px;
+  background-color:#fff;  
+  cursor:none;    
+}
+
+/* This is for the title text. */
+.cloud-zoom-title {
+  font-family:Arial, Helvetica, sans-serif;
+  position:absolute !important;
+  background-color:#000;
+  color:#fff;
+  padding:3px;
+  width:100%;
+  text-align:center;  
+  font-weight:bold;
+  font-size:10px;
+  top:0px;
+}
+
+/* This is the zoom window. */
+.cloud-zoom-big {
+border:1px solid #fff;
+overflow:hidden;
+margin-top:0;
+margin-left:4px;
+/*border-radius: 30px;*/
+border-top-right-radius: 30px;
+}
+
+/* This is the loading message. */
+.cloud-zoom-loading {
+  color:white;  
+  background:#222;
+  padding:3px;
+  /*border:1px solid #000;*/
 }

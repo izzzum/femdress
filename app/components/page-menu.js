@@ -26,7 +26,7 @@ export default Ember.Component.extend({
             Ember.$(`#${id}`).addClass('active');
         },
         navbarToggle() {
-            if(this.get('isDropdownActive')){
+            if(this.get('isDropdownActive') && Ember.$('.active').length > 1){
                 this.set('isOpen', true);
             }
             if(this.get('iSnavbarClosed')){

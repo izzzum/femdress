@@ -2,12 +2,4 @@
 footer.footer{
  font-family: 'Kelly Slab';
  font-size: 13px;
- &:before{
-   display: block;
-   content: "";
-    width: 100%;
-    height: 10px;
-    background: #C6CED7;
-    margin: auto;
- }
 }
