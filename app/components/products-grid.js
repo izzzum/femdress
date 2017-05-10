@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    classNames:['col-xs-4', 'col-sm-2', 'col-md-2', 'col-lg-2'],
+    classNames:['col-xs-6', 'col-sm-4', 'col-md-3', 'col-lg-2'],
     thumb: Ember.computed(function(){
         let product = this.get('product');
         let pic;

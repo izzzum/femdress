@@ -1,11 +1,8 @@
-@include font-face('PT Sans Narrow');
-.index{
-    h1{
-        font-family: 'PT Sans Narrow';
+.about{
+    p.spaced{
+        text-indent: 0;
     }
-    p{
-        text-indent: 20px;
-        font-family: 'PT Sans Narrow';
-        font-size: 17px;
+    address{
+        text-indent: 0;
     }
 }

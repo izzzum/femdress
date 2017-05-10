@@ -3,6 +3,8 @@ import Ember from 'ember';
 export default Ember.Mixin.create({
     setupController(controller, model){
         this._super(controller, model);
-        this.controllerFor(this.get('routeName')).set('linkId', `#${this.get('routeName')}`);
+        let route = this.get('routeName');
+        this.controllerFor(route).set('linkId', `#${route}`);
+        this.controllerFor(route).set('route', route);
     },
 });

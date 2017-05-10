@@ -1,6 +1,5 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    classNames:['header', 'container', 'line-after'],
-    tagName: 'header'
+    classNames:['splash']
 });

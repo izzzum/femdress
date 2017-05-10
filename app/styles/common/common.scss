@@ -1,5 +1,13 @@
 @include font-face('Anton');
+@include font-face('PT Sans Narrow');
 //loader
+    p.spaced{
+        text-indent: 20px;
+        font-family: 'PT Sans Narrow';
+        font-size: 18px;
+        margin-top: 0.7em;
+        margin-bottom: 0.7em;
+    }
 .ember-load-indicator{
     p{
         font-family: 'Anton', 'Verdana';
@@ -52,7 +60,8 @@
 }
 //body
 body{
-    background-color: #edeef0;
+    background-color: rgba(0, 0, 0, 0);
+    color: #333;
     &.loading{
         height: 100vh;
     }
@@ -152,6 +161,15 @@ body .liquid-fix{
  }
 }
 //bootstrap addons
+.splash {
+    height: 35em;
+    padding-top: 5em;
+    margin-bottom: 2em;
+    background-image: url(/assets/images/background.jpg);
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+}
 .col-grow-3{
     width: 33.3333%;
 }
@@ -166,10 +184,18 @@ body .liquid-fix{
       margin-right: auto;
   }
 }
-
+/*.full{
+    background: url('/assets/images/background.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}*/
 
 //paste
-
+.box1{
+    margin-bottom: 10px;
+}
   /*RUBLE SIGN HANDLER*/
    @font-face { font-family: "Rubl Sign"; src: url('http://www.artlebedev.ru/;-)/ruble.eot'); }
     span.rur { position: relative; font-family: "Rubl Sign"; text-transform: uppercase; font-size: 18px;}    
@@ -186,6 +212,7 @@ body .liquid-fix{
     width: 100%;
     position: absolute;
     z-index: 0;
+    left: 0;
 }
 .box1:hover .prodinfobox1{
 z-index: 10;
@@ -201,7 +228,7 @@ background: #f2f2f2;
 p{
     transition: all .2s ease;
     opacity: 0;
-    width: 84%;
+    width: 100%;
 }
 }
 .box1 a{

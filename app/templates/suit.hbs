@@ -1,7 +1,9 @@
-<div class="container">
-    <div class="row">
-        {{#each model as |product|}}
-            {{products-grid product=product}}
-        {{/each}}
-    </div>
+<div class="container {{route}}">
+        {{#if showLoader}}
+            {{loader-img show=showLoader}}
+        {{/if}}
+        {{products-container model=model route=route}}
+        {{#if showLoader}}
+            {{loader-img show=showLoader}}
+        {{/if}}
 </div>

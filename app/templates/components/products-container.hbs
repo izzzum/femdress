@@ -1,0 +1,6 @@
+{{#each model as |product|}}
+    {{products-grid product=product}}
+{{/each}}
+{{#if isThereMore}}
+    {{loader-img show=isThereMore}}
+{{/if}}

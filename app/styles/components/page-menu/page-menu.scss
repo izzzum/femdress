@@ -1,0 +1,106 @@
+#navbar.navbar-collapse{
+    &.collapse{
+       background-color: rgba(0, 0, 0, 0); 
+       #route{
+         background-color: rgba(0, 0, 0, 0); 
+       }
+    }
+    &.collapsed{
+        background-color: #333;
+        #route{
+        background-color: #333;
+       }
+        .dropdown-menu {
+            .dropdown-header{
+                color: #ccc;
+            }
+            > li > a{
+                &, &:focus{
+                    color:#fff;
+                }
+                &:hover{
+                    color:#ccc;
+                }
+                &.active{
+                    &, &:focus{
+                        color: #333;
+                    }
+                    &:hover{
+                        color: #777;
+                    }
+                }
+            }
+        }
+    }
+}
+nav.navbar{
+    &.navbar-default{
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        color: #fff;
+        .navbar-brand{
+            color: #fff;
+            &:hover{
+                color:#ccc;
+            }
+        }
+        .navbar-toggle{
+            border-color: #fff;
+            & .icon-bar{
+                background-color: #fff;
+            }
+            &:hover{
+                background-color: #fff;
+                & .icon-bar{
+                    background-color: #333;
+                }
+            }
+        }
+        .navbar-nav{
+            > .active > a{
+                &, &:hover, &:focus{
+                    color: #333;
+                    background-color: #fff;
+                }
+            }
+            > .open {
+                    > a{
+                    &, &:hover, &:focus{
+                        color: #333;
+                        background-color: #fff;
+                    }
+                }
+                .dropdown-menu {
+                    .dropdown-header{
+                        color: #ccc;
+                    }
+                    > li > a{
+                        &, &:focus{
+                            color:#333;
+                        }
+                        &:hover{
+                            color:#ccc;
+                        }
+                        &.active{
+                            &, &:focus{
+                                color: #fff;
+                            }
+                            &:hover{
+                                color: #333;
+                            }
+                        }
+                    }
+                }
+            }
+            > li > a{
+                &, &:focus{
+                    color: #fff;
+                }
+                &:hover{
+                    color:#ccc;
+                }
+            }
+        }
+    }
+}

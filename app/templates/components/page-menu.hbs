@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle {{if iSnavbarClosed "collapsed"}}" {{action 'navbarToggle'}} aria-expanded="{{if iSnavbarClosed "false" "true"}}" aria-controls="navbar">
@@ -7,9 +7,9 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <span class="navbar-brand" href="#">Меню</span>
+            {{#link-to 'index' class="navbar-brand"}}FemDress{{/link-to}}
           </div>
-          <div id="navbar" class="navbar-collapse {{if iSnavbarClosed "collapse"}}" aria-expanded="{{if iSnavbarClosed "false" "true"}}">
+          <div id="navbar" class="navbar-collapse {{if iSnavbarClosed "collapse" "collapsed"}}" aria-expanded="{{if iSnavbarClosed "false" "true"}}">
             <ul class="nav navbar-nav">
               <li id="index">{{#link-to 'index' invokeAction=(action 'dropdownToggle' true 'index')}}Главная{{/link-to}}</li>
               <li class="dropdown {{if isOpen "open"}} {{if isDropdownActive "active"}}">
