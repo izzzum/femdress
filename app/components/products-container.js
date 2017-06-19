@@ -18,7 +18,7 @@ export default Ember.Component.extend({
         st += Ember.$(window).height();
         if(st >= Ember.$('body').outerHeight(true))   //user scrolled to bottom of the page?
         {
-            if(this.get('isLoadingNow') === false) {
+            if(this.get('isLoadingNow') === false && this.get('store').peekAll(this.get('route')).content.length < this.get('model').limit) {
                 this.set('isLoadingNow', true);
                 this.send('loadMore');
             }
@@ -37,6 +37,7 @@ export default Ember.Component.extend({
                 _this.get('store').query(route, {
                 offset: offset}).then(function() {
                     _this.set('model', _this.get('store').peekAll(route));
+                    _this.set('model.limit', _this.get('model').content[0]._data.limit);
                     _this.set('isLoadingNow', false);
                 });
         }
